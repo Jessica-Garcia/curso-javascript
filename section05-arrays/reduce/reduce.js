@@ -64,17 +64,11 @@ console.log(sumAges)
 
 // are all alive? true or false
 
+const checkAlive = (value) => value === true;
+
 const allAlive = people.map(p => p.isAlive).reduce((acc, value) => {
     if(acc && value) return true;
     return false;
 })
 
 console.log(allAlive);
-
-// is someone alive? true or false
-
-const checkAlive = (value) => value === true;
-
-const someoneAlive = people.map(p => p.isAlive).some(checkAlive)
-
-console.log(someoneAlive);
